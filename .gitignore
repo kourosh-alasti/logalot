@@ -1,7 +1,4 @@
 /node_modules
-
 /logs
-
-/.tap/test-results
-
+/.tap
 /tests
