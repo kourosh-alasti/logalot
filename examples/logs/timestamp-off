@@ -1,0 +1,5 @@
+[2024-10-02T02:12:55.406Z] [LOG] This is a Timestamp Off [LOG] Message
+[2024-10-02T02:12:55.406Z] [WARN] This is a Timestamp Off [WARN] Message
+[2024-10-02T02:12:55.406Z] [DEBUG] This is a Timestamp Off [DEBUG] Message
+[2024-10-02T02:12:55.406Z] [ERROR] This is a Timestamp Off [ERROR] Message
+[2024-10-02T02:12:55.406Z] [INFO] This is a Timestamp Off [INFO] Message
