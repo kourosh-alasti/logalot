@@ -5,14 +5,21 @@
   "main": "dist/index.js",
   "module": "src/index.ts",
   "homepage": "https://github.com/AlastiSolutions/logAlot#readme",
-  "maintainers": ["kourosh-alasti"],
+  "maintainers": [
+    "kourosh-alasti"
+  ],
   "publisher": "kourosh-alasti",
-  "publishConfig": {"access": "public"},
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
   "author": "Kourosh <coding@kouroshalasti.com>",
   "description": "TypeScript-first logging library",
   "scripts": {
     "dev": "deno run --allow-read --allow-write src/index.ts",
+    "example:default": "deno run --allow-read --allow-write examples/default.ts",
+    "example:configured": "deno run --allow-read --allow-write examples/configured.ts",
+    "example:exports": "deno run --allow-read --allow-write examples/exports.ts",
     "build": "tsc",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
@@ -31,6 +38,7 @@
   ],
   "keywords": [
     "NPM",
+    "Node.JS",
     "TypeScript",
     "Logger"
   ],
