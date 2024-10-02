@@ -59,12 +59,12 @@ class Logger {
     const { timestamp, level, message, color } = options
     const coloredLevel = colorize(color, `[${level.toUpperCase()}]`)
 
-    return `${timestamp} ${coloredLevel} ${message}`
+    return `${timestamp.length > 0 ? `[${timestamp}]` : ``}${coloredLevel} ${message}`
   }
 
   private display(level: LogLevel, message: string): void {
     const finalMessage = this.messages[level]({
-      timestamp: this.timestamps ? `[${getTimestamp()}]` : '',
+      timestamp: this.timestamps ? `${getTimestamp()}` : '',
       level,
       message,
       color: this.colors[level]
