@@ -1,0 +1,5 @@
+[2024-10-02T02:12:55.405Z] [LOG] This is a Colored [LOG] Message
+[2024-10-02T02:12:55.405Z] [WARN] This is a Colored [WARN] Message
+[2024-10-02T02:12:55.405Z] [DEBUG] This is a Colored [DEBUG] Message
+[2024-10-02T02:12:55.405Z] [ERROR] This is a Colored [ERROR] Message
+[2024-10-02T02:12:55.405Z] [INFO] This is a Colored [INFO] Message
