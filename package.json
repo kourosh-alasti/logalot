@@ -1,66 +1,69 @@
 {
-  "name": "logalot",
+  "name": "@alasti/logger",
   "version": "1.0.0",
   "type": "module",
-  "main": "dist/index.js",
-  "module": "src/index.ts",
   "homepage": "https://github.com/AlastiSolutions/logAlot#readme",
+  "description": "TypeScript-first Logging Library",
+  "main": "index.js",
+  "scripts": {
+    "dev": "deno run --allow-read --allow-write src/index.ts",
+    "build": "tsc",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "lint:staged": "lint-staged",
+    "publish": "npm publish",
+    "prepare": "husky",
+    "format": "prettier --write --config .prettierrc .",
+    "test": ""
+  },
+  "keywords": [
+    "TypeScript",
+    "Logger",
+    "Middleware",
+    "Server"
+  ],
+  "author": "Kourosh Alasti <coding@kouroshalasti.com>",
   "maintainers": [
     "kourosh-alasti"
+  ],
+  "contributors": [
+    {
+      "name": "kourosh-alasti",
+      "url": "https://github.com/kourosh-alasti"
+    },
+    {
+      "name": "TylerDeep",
+      "url": "https://github.com/TylerDeep"
+    }
   ],
   "publisher": "kourosh-alasti",
   "publishConfig": {
     "access": "public"
   },
-  "license": "MIT",
-  "author": "Kourosh <coding@kouroshalasti.com>",
-  "description": "TypeScript-first logging library",
-  "scripts": {
-    "dev": "deno run --allow-read --allow-write src/index.ts",
-    "example:default": "deno run --allow-read --allow-write examples/default.ts",
-    "example:configured": "deno run --allow-read --allow-write examples/configured.ts",
-    "example:exports": "deno run --allow-read --allow-write examples/exports.ts",
-    "build": "tsc",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "lint:staged": "lint-staged",
-    "test": "tap run",
-    "test:dump": "tap dump-config",
-    "test:ci": "tap run --coverage",
-    "publish": "npm publish",
-    "prepare": "husky",
-    "format": "prettier --write --config .prettierrc.yaml ."
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlastiSolutions/logAlot.git"
   },
   "os": [
     "darwin",
     "linux",
     "win32"
   ],
-  "keywords": [
-    "NPM",
-    "Node.JS",
-    "TypeScript",
-    "Logger"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AlastiSolutions/logAlot.git"
-  },
+  "license": "MIT",
   "devDependencies": {
-    "@eslint/js": "^9.11.1",
-    "@types/node": "^22.6.1",
-    "eslint": "^9.11.1",
+    "@eslint/js": "^9.13.0",
+    "@types/node": "^22.7.9",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-typescript": "^3.0.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "globals": "^15.9.0",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
-    "prettier": "3.3.3",
-    "tap": "^21.0.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.6.2",
-    "typescript-eslint": "^8.7.0"
+    "markdownlint": "^0.35.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.11.0"
   },
   "peerDependencies": {
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.3"
   }
 }
