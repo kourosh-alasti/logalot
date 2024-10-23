@@ -6,7 +6,6 @@
   "description": "TypeScript-first Logging Library",
   "main": "index.js",
   "scripts": {
-    "dev": "deno run --allow-read --allow-write src/index.ts",
     "build": "tsc",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -52,6 +51,7 @@
   "license": "MIT",
   "devDependencies": {
     "@eslint/js": "^9.13.0",
+    "@types/eslint__js": "^8.42.3",
     "@types/node": "^22.7.9",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-typescript": "^3.0.0",
