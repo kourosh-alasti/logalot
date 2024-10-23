@@ -1,16 +1,16 @@
+.git/ 
 .github/
-.husky/
-.tap/
-examples/
-src/
-tests/
+.gitignore
+
+src/ 
 node_modules/
 logs/
+tests/
+examples/
 
-.gitignore
 .prettierignore
+.prettierrc
 .prettierrc.yaml
-.taprc
 .markdownlint.yaml
 
 package-lock.json
