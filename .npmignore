@@ -2,6 +2,7 @@
 .github/
 .gitignore
 .vscode/
+.husky/
 
 
 src/ 
@@ -14,11 +15,10 @@ examples/
 .prettierrc
 .prettierrc.yaml
 .markdownlint.yaml
-.linstagedrc.mjs
+.lintstagedrc.mjs
 jsr.json
 
 package-lock.json
 eslint.config.js
 lint-staged.config.cjs
 tsconfig.tsbuildinfo
-LICENSE
