@@ -1,7 +1,7 @@
-import init from './logger.ts';
+import init from './logger/index.ts';
 import { colorize } from './utils/index.ts';
 
 const createLogger = init;
-const addColor = colorize;
+const addColorToText = colorize;
 
-export { addColor, createLogger }
+export { addColorToText, createLogger };
