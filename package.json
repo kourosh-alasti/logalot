@@ -1,10 +1,11 @@
 {
   "name": "@alasti/logger",
-  "version": "1.0.0",
+  "private": false,
+  "version": "1.0.1",
   "type": "module",
-  "homepage": "https://github.com/AlastiSolutions/logAlot#readme",
+  "homepage": "https://github.com/kourosh-alasti/logalot#readme",
   "description": "TypeScript-first Logging Library",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
     "lint": "eslint .",
@@ -41,7 +42,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AlastiSolutions/logAlot.git"
+    "url": "git+https://github.com/kourosh-alasti/logalot.git"
   },
   "os": [
     "darwin",
