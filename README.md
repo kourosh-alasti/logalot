@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/@kourosh-alasti%2Flogger.svg)](https://badge.fury.io/js/@kourosh-alasti/logger)
 
-[Examples] (./examples/default.ts) &bullet;[Documentation] (https://github.com/kourosh-alasti/logalot/wiki) &bullet;[Changelog] (./CHANGELOG.md) &bullet;[License] (./LICENSE)
+[Examples](./examples/default.ts) &bullet;[Documentation](https://github.com/kourosh-alasti/logalot/wiki) &bullet;[Changelog](./CHANGELOG.md) &bullet;[License](./LICENSE)
 
 A TypeScript-first logging library
 
@@ -10,11 +10,11 @@ A TypeScript-first logging library
 
 ## Table of Contents
 
-- [@kourosh-alasti/logger] (#@kourosh-alasti/logger)
-- [Table of Contents] (#table-of-contents)
-- [Installation] (#installation)
-- [Usage] (#usage)
-- [Contributing] (#contributing)
+- [@kourosh-alasti/logger](#@kourosh-alasti/logger)
+- [Table of Contents](#table-of-contents)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
 
 ## Installation
 
@@ -48,4 +48,4 @@ logger.info("Hello World!");
 
 ## Contributing
 
-See [CONTRIBUTING.md] (./CONTRIBUTING.md)
+See [CONTRIBUTING.md](./CONTRIBUTING.md)
