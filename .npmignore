@@ -4,7 +4,6 @@
 .vscode/
 .husky/
 
-
 src/ 
 node_modules/
 logs/
@@ -22,3 +21,4 @@ package-lock.json
 eslint.config.js
 lint-staged.config.cjs
 tsconfig.tsbuildinfo
+TODO.md
