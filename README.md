@@ -2,9 +2,9 @@
 
 [![npm version](https://badge.fury.io/js/@kourosh-alasti%2Flogger.svg)](https://badge.fury.io/js/@kourosh-alasti/logger)
 
-[Examples](./examples/default.ts) &bullet;[Documentation](https://github.com/kourosh-alasti/logalot/wiki) &bullet;[Changelog](./CHANGELOG.md) &bullet;[License](./LICENSE)
+[Examples](./examples/default.ts) &bullet; [Documentation](https://github.com/kourosh-alasti/logalot/wiki) &bullet; [Changelog](./CHANGELOG.md) &bullet; [License](./LICENSE)
 
-A TypeScript-first logging library
+A Zero Dependency TypeScript logging library
 
 <div align="center"> <img src="examples/screenshot.png" alt="configured preset"> </div>
 
