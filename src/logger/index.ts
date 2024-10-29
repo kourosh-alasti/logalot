@@ -1,7 +1,7 @@
-import fs from 'node:fs';
-import path from 'node:path';
+import * as fs from 'fs';
+import * as path from 'path';
 
-import { colorize, getTimestamp } from '../utils/index.ts';
+import { addColorToText, getTimestamp } from '../utils';
 
 type LogLevel = 'log' | 'warn' | 'debug' | 'error' | 'info';
 type LogFileType = 'csv' | 'json' | 'txt';
@@ -57,14 +57,14 @@ class Logger {
 
   private createMessage(options: MessageOptions): string {
     const { timestamp, level, message, color } = options;
-    const coloredLevel = colorize(color, `[${level.toUpperCase()}]`);
+    const coloredLevel = addColorToText(color, `[${level.toUpperCase()}]`);
 
     return `${timestamp.length > 0 ? `[${timestamp}]` : ``}${coloredLevel} ${message}`;
   }
 
   private displayLog(level: LogLevel | 'notification', message: string): void {
     if (level === 'notification') {
-      const noti = `\n[${getTimestamp()}] [${colorize('#73FBD3', 'NOTIFICATION')}] ${message}\n`;
+      const noti = `\n[${getTimestamp()}] [${addColorToText('#73FBD3', 'NOTIFICATION')}] ${message}\n`;
 
       process.stdout.write(noti);
       return;
@@ -187,8 +187,8 @@ class Logger {
   }
 }
 
-const init = (options?: LoggerOptions): Logger => {
+const createLogger = (options?: LoggerOptions): Logger => {
   return new Logger({ ...options, timestamps: options?.timestamps ?? true });
 };
 
-export default init;
+export default createLogger;

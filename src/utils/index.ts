@@ -13,7 +13,7 @@ function hexToRGB(hex: string): [number, number, number] {
   return [redValue, greenValue, blueValue];
 }
 
-function colorize(color: string, message: string): string {
+function addColorToText(color: string, message: string): string {
   const [r, g, b] = hexToRGB(color);
   return `\x1b[38;2;${r};${g};${b}m${message}\x1b[0m`;
 }
@@ -22,4 +22,4 @@ function getTimestamp(): string {
   return new Date().toISOString();
 }
 
-export { colorize, getTimestamp, hexToRGB };
+export { addColorToText, getTimestamp, hexToRGB };
