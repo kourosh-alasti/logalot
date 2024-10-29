@@ -1,20 +1,37 @@
 {
   "name": "@kourosh-alasti/logger",
   "private": false,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "homepage": "https://github.com/kourosh-alasti/logalot#readme",
   "description": "TypeScript-first Logging Library",
-  "main": "dist/index.js",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/mjs/index.mjs",
+  "types": "./dist/types",
   "scripts": {
-    "build": "tsc",
+    "build": "npm run build:clean && npm run build:cjs && npm run build:esm && npm run build:types && node ./scripts/prepare-package.cjs",
+    "build:esm": "tsc -b tsconfig.esm.json",
+    "build:types": "tsc -b tsconfig.types.json",
+    "build:cjs": "tsc -b tsconfig.cjs.json && npm run transpile:cjs:default && npm run transpile:cjs:logger && npm run transpile:cjs:utils && npm run transpile:cjs:clean",
+    "build:clean": "rm -rf ./dist",
+    "transpile:cjs:default": "rollup ./dist/cjs/index.js --file ./dist/cjs/index.cjs --format cjs",
+    "transpile:cjs:logger": "rollup ./dist/cjs/logger/index.js --file ./dist/cjs/logger/index.cjs --format cjs",
+    "transpile:cjs:utils": "rollup ./dist/cjs/utils/index.js --file ./dist/cjs/utils/index.cjs --format cjs",
+    "transpile:cjs:clean": "rm ./dist/cjs/index.js && rm ./dist/cjs/logger/index.js && rm ./dist/cjs/utils/index.js && node ./scripts/rename-exports.cjs",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:staged": "lint-staged",
     "publish": "npm publish",
     "prepare": "husky",
-    "format": "prettier --write --config .prettierrc .",
-    "test": ""
+    "format": "prettier --write --config .prettierrc ."
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "require": "./dist/cjs/index.cjs",
+      "import": "./dist/esm/index.js",
+      "default": "./dist/esm/index.js"
+    }
   },
   "keywords": [
     "TypeScript",
@@ -61,6 +78,7 @@
     "lint-staged": "^15.2.10",
     "markdownlint": "^0.35.0",
     "prettier": "^3.3.3",
+    "rollup": "^4.24.2",
     "typescript": "^5.6.3",
     "typescript-eslint": "^8.11.0"
   },
