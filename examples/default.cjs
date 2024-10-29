@@ -1,4 +1,4 @@
-import { createLogger } from '../src/index.ts';
+const { createLogger } = require('@kourosh-alasti/logger');
 
 const logger = createLogger();
 
