@@ -1,4 +1,4 @@
-import { addColorToText, createLogger } from '../src/index.ts';
+import { addColorToText, createLogger } from '@kourosh-alasti/logger';
 
 const coloredLogger = createLogger({
   colors: {
