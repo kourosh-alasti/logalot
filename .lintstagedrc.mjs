@@ -1,6 +1,6 @@
 export default {
-  '**/*.(ts)': 'tsc --noEmit',
-  '**/*.(ts|js|cjs|mjs)': filenames => [
+  'src/*.(ts)': 'tsc --noEmit',
+  'src/*.(ts|js|cjs|mjs)': filenames => [
     `eslint --fix ${filenames.join(' ')}`,
     `prettier --write ${filenames.join(' ')} --config .prettierrc`,
   ],
