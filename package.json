@@ -1,18 +1,13 @@
 {
-  "name": "@kourosh-alasti/logger",
+  "name": "litelogs",
   "private": false,
-  "version": "1.1.0",
+  "version": "1.2.0",
   "type": "module",
   "homepage": "https://github.com/kourosh-alasti/logalot#readme",
   "description": "TypeScript-first Logging Library",
-  "main": "./dist/cjs/index.cjs",
-  "module": "./dist/mjs/index.mjs",
-  "types": "./dist/types",
+  "main": "./dist/es/index.js",
   "scripts": {
-    "build": "npm run build:clean && npm run build:cjs && npm run build:esm && npm run build:types && node ./scripts/prepare-package.cjs",
-    "build:esm": "tsc -b tsconfig.esm.json",
-    "build:types": "tsc -b tsconfig.types.json",
-    "build:cjs": "tsc -b tsconfig.cjs.json && npm run transpile:cjs:default && npm run transpile:cjs:logger && npm run transpile:cjs:utils && npm run transpile:cjs:clean",
+    "build": "npm run build:clean && bunchee",
     "build:clean": "rm -rf ./dist",
     "transpile:cjs:default": "rollup ./dist/cjs/index.js --file ./dist/cjs/index.cjs --format cjs",
     "transpile:cjs:logger": "rollup ./dist/cjs/logger/index.js --file ./dist/cjs/logger/index.cjs --format cjs",
@@ -24,14 +19,6 @@
     "publish": "npm publish",
     "prepare": "husky",
     "format": "prettier --write --config .prettierrc ."
-  },
-  "exports": {
-    ".": {
-      "types": "./dist/types/index.d.ts",
-      "require": "./dist/cjs/index.cjs",
-      "import": "./dist/esm/index.js",
-      "default": "./dist/esm/index.js"
-    }
   },
   "keywords": [
     "TypeScript",
@@ -47,10 +34,6 @@
     {
       "name": "kourosh-alasti",
       "url": "https://github.com/kourosh-alasti"
-    },
-    {
-      "name": "TylerDeep",
-      "url": "https://github.com/TylerDeep"
     }
   ],
   "publisher": "kourosh-alasti",
@@ -68,21 +51,59 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "@eslint/js": "^9.13.0",
+    "@eslint/js": "^9.16.0",
     "@types/eslint__js": "^8.42.3",
-    "@types/node": "^22.7.9",
+    "@types/node": "^22.10.1",
+    "bunchee": "^6.0.3",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-typescript": "^3.0.0",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "husky": "^9.1.6",
+    "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
-    "markdownlint": "^0.35.0",
-    "prettier": "^3.3.3",
-    "rollup": "^4.24.2",
-    "typescript": "^5.6.3",
-    "typescript-eslint": "^8.11.0"
+    "markdownlint": "^0.37.0",
+    "prettier": "^3.4.2",
+    "rollup": "^4.28.1",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
   },
   "peerDependencies": {
     "typescript": "^5.6.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/es/index.js",
+  "types": "./dist/es/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/es/index.d.ts",
+        "default": "./dist/es/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.cts",
+        "default": "./dist/cjs/index.cjs"
+      }
+    },
+    "./utils": {
+      "import": {
+        "types": "./dist/es/utils.d.ts",
+        "default": "./dist/es/utils.js"
+      },
+      "require": {
+        "types": "./dist/cjs/utils.d.cts",
+        "default": "./dist/cjs/utils.cjs"
+      }
+    },
+    "./logger": {
+      "import": {
+        "types": "./dist/es/logger.d.ts",
+        "default": "./dist/es/logger.js"
+      },
+      "require": {
+        "types": "./dist/cjs/logger.d.cts",
+        "default": "./dist/cjs/logger.cjs"
+      }
+    }
   }
 }

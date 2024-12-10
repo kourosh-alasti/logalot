@@ -4,6 +4,10 @@
         "node_modules/"
     ],
     "compilerOptions": {
-        "outDir": "./dist"
+        "outDir": "./dist",
+        "moduleResolution": "nodenext",
+        "module": "NodeNext",
+        "allowImportingTsExtensions": true,
+        "noEmit": true
     }
 }

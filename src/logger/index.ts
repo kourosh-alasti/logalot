@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-import { addColorToText, getTimestamp } from '../utils';
+import { addColorToText, getTimestamp } from '../utils/index.ts';
 
 type LogLevel = 'log' | 'warn' | 'debug' | 'error' | 'info';
 type LogFileType = 'csv' | 'json' | 'txt';

@@ -41,4 +41,5 @@ declare class Logger {
     export(filePath: string, options?: ExportOptions): void;
 }
 declare const createLogger: (options?: LoggerOptions) => Logger;
-export default createLogger;
+
+export { createLogger as default };
