@@ -23,4 +23,5 @@ eslint.config.js
 lint-staged.config.cjs
 tsconfig.tsbuildinfo
 tsconfig.json.bak
+package.json.bak
 TODO.md
