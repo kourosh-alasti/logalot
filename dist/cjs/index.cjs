@@ -1,8 +1,17 @@
-'use strict';
+var logger_cjs = require('./logger.cjs');
+var utils_cjs = require('./utils.cjs');
 
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.createLogger = exports.addColorToText = void 0;
-var logger_1 = require('./logger/index.cjs');
-exports.createLogger = logger_1.default;
-var utils_1 = require('./utils/index.cjs');
-Object.defineProperty(exports, "addColorToText", { enumerable: true, get: function () { return utils_1.addColorToText; } });
+function _interopDefault (e) { return e && e.__esModule ? e : { default: e }; }
+
+var logger_cjs__default = /*#__PURE__*/_interopDefault(logger_cjs);
+
+
+
+Object.defineProperty(exports, "createLogger", {
+	enumerable: true,
+	get: function () { return logger_cjs__default.default; }
+});
+Object.defineProperty(exports, "addColorToText", {
+	enumerable: true,
+	get: function () { return utils_cjs.addColorToText; }
+});
