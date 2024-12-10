@@ -1,9 +1,9 @@
 {
-  "name": "litelogs",
+  "name": "loglitely",
   "private": false,
-  "version": "1.2.0",
+  "version": "1.2.1",
   "type": "module",
-  "homepage": "https://github.com/kourosh-alasti/litelogs#readme",
+  "homepage": "https://github.com/kourosh-alasti/loglitely#readme",
   "description": "TypeScript-first Logging Library",
   "main": "./dist/es/index.js",
   "scripts": {
@@ -38,7 +38,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kourosh-alasti/litelogs.git"
+    "url": "git+https://github.com/kourosh-alasti/loglitely.git"
   },
   "os": [
     "darwin",

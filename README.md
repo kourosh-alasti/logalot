@@ -1,6 +1,6 @@
-# @kourosh-alasti/logger
+# loglitely
 
-[![npm version](https://badge.fury.io/js/@kourosh-alasti%2Flogger.svg)](https://badge.fury.io/js/@kourosh-alasti/logger)
+[![npm version](https://badge.fury.io/js/loglitely.svg)](https://badge.fury.io/js/@kourosh-alasti/logger)
 
 [Examples](./examples/default.ts) &bullet; [Documentation](https://github.com/kourosh-alasti/logalot/wiki) &bullet; [Changelog](./CHANGELOG.md) &bullet; [License](./LICENSE)
 
@@ -10,7 +10,7 @@ A Zero Dependency TypeScript logging library
 
 ## Table of Contents
 
-- [@kourosh-alasti/logger](#@kourosh-alasti/logger)
+- [loglitely](#logelitely)
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -21,21 +21,21 @@ A Zero Dependency TypeScript logging library
 Add the package to your project via [npm](https://docs.npmjs.com/)
 
 ```bash
-npm install @kourosh-alasti/logger
+npm install loglitely
 ```
 
 ## Support Matrix
 
 | Version | Supported |
 | :-----: | :-------: |
-| >=1.0.0 |    ✅    |
+| >=1.2.0 |    ✅    |
 
 ## Usage
 
 There are two ways to add a logger to your application. The quickest way is using the default configuration.
 
 ```typescript
-import { createLogger } from '@kourosh-alati/logger';
+import { createLogger } from 'loglitely';
 
 const logger = createLogger();
 
