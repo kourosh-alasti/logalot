@@ -3,16 +3,12 @@
   "private": false,
   "version": "1.2.0",
   "type": "module",
-  "homepage": "https://github.com/kourosh-alasti/logalot#readme",
+  "homepage": "https://github.com/kourosh-alasti/litelogs#readme",
   "description": "TypeScript-first Logging Library",
   "main": "./dist/es/index.js",
   "scripts": {
     "build": "npm run build:clean && bunchee",
     "build:clean": "rm -rf ./dist",
-    "transpile:cjs:default": "rollup ./dist/cjs/index.js --file ./dist/cjs/index.cjs --format cjs",
-    "transpile:cjs:logger": "rollup ./dist/cjs/logger/index.js --file ./dist/cjs/logger/index.cjs --format cjs",
-    "transpile:cjs:utils": "rollup ./dist/cjs/utils/index.js --file ./dist/cjs/utils/index.cjs --format cjs",
-    "transpile:cjs:clean": "rm ./dist/cjs/index.js && rm ./dist/cjs/logger/index.js && rm ./dist/cjs/utils/index.js && node ./scripts/rename-exports.cjs",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:staged": "lint-staged",
@@ -42,7 +38,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kourosh-alasti/logalot.git"
+    "url": "git+https://github.com/kourosh-alasti/litelogs.git"
   },
   "os": [
     "darwin",
