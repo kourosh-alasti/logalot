@@ -1,7 +1,6 @@
 /node_modules
 /logs
-/.tap
 
-TODO.md 
-tsconfig.json.bak
-package.json.bak
+dist/
+
+TODO.md
